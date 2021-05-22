@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('store','HomeController');
+Route::post('store','HomeController@store');
+#Route::resource('store','HomeController');
