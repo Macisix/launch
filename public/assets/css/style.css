@@ -52,7 +52,7 @@ body {
   background-image: linear-gradient(0deg, #00000075, #00000026), url(../../assets/images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 0%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -76,12 +76,17 @@ body {
 .main-content .card {
   border-radius: 16px;
   border: none;
+      margin-left: 20px;
   margin-bottom: 15px;
   box-shadow: 0 5px 10px #00000014;
 }
 
 .main-content .card-body {
   padding: 25px;
+}
+
+.main-content .card-body hr {
+  margin: 35px 0 30px;
 }
 
 .main-content .card-body h4 {
@@ -103,8 +108,19 @@ body {
 .btn-primary{
   padding: 8px 35px !important;
 }
+
+.banner-mb {
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 0%;
+}
 /* Media Query */
 
+@media (max-width: 1200px) {
+.main-content .card {
+      margin-left: 0;
+}
+}
 
 @media (max-width: 576px) {
   .main-content {

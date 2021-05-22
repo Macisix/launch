@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row d-sm-none">
             <div class="col-12 px-0">
-                <img class="img-fluid mobile-img w-100" src="{{ url('assets/images/banner-mb.png') }}" alt="banner">
+                <div class="banner-mb" style="background-image: url({{ url('assets/images/banner-mb.png') }});"></div>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -27,7 +27,7 @@
                         move.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-5">
+               <div class="col-md-6 col-xl-5 offset-xl-1">
                 <div class="card">
                     <div class="card-body">
                         @if(session()->has('error'))
@@ -44,7 +44,7 @@
                             @csrf
                             <h4>A sneak peak into what you can expect</h4>
                             <div class="media align-items-center mb-3">
-                                <img src="{{ url('assets/images/icon-1.pn') }}g" class="mr-3" alt="...">
+                                <img src="{{ url('assets/images/icon-1.png') }}" class="mr-3" alt="...">
                                 <div class="media-body">
                                     <p class="mb-0">Select from Singapore most trusted moving services</p>
                                 </div>
