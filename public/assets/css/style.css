@@ -26,17 +26,12 @@ body {
   background: #85898C;
 }
 
-.btn-outline-secondary {
-  color: #000;
-  border: 1px solid #bbb3b3;
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background: #0d8aff;
+  border: 1px solid #0d8aff;
 }
-
-
-.btn-outline-secondary:hover {
-  background: #0093DF;
-  border: 1px solid #0093DF;
- }
-
 
 .form-control {
      border-radius: 8px;
