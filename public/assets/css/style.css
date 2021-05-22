@@ -29,8 +29,8 @@ body {
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active {
-  background: #0d8aff;
-  border: 1px solid #0d8aff;
+  background: #85898C;
+  border: 1px solid #85898C;
 }
 
 .form-control {
@@ -45,13 +45,14 @@ body {
   box-shadow: none;
   outline: none;
   border: 1px solid #0093DF;
+  background: #F5F5F6;
 }
 
 .main-content {
   background-image: linear-gradient(0deg, #00000075, #00000026), url(../../assets/images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: inherit;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +100,9 @@ body {
       font-family: sf-ui-display-light;
   }
 
+.btn-primary{
+  padding: 8px 35px !important;
+}
 /* Media Query */
 
 

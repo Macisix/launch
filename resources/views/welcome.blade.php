@@ -63,7 +63,7 @@
                                 <label>Enter your email to get notified when we lanuch</label>
                                 <input type="email" name="email" class="form-control" placeholder="Enter your email here">
                             </div>
-                            <button type="submit" class="btn btn-secondary float-right mt-1">Submit</button>
+                            <button type="submit" class="btn btn-secondary float-right mt-1" disabled="">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -77,5 +77,20 @@
 <!-- Javascript -->
 <script src="{{ url('assets/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script>
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    $(document).on('keydown','input[type="email"]',function () {
+        var checkEmail = isEmail($(this).val());
+        if(checkEmail){
+            $(this).parents('form').find('button').removeAttr('disabled').removeClass('btn-secondary').addClass('btn-primary');
+        }
+        else{
+            $(this).parents('form').find('button').attr('disabled',true).removeClass('btn-primary').addClass('btn-secondary');
+        }
+    });
+</script>
 </body>
 </html>
