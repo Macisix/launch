@@ -1,0 +1,139 @@
+body {
+  font-family: sf-ui-display;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: sf-ui-display;
+  src: url(../../assets/fonts/sf-ui-display-medium.otf);
+}
+
+@font-face {
+  font-family: sf-ui-display-light;
+  src: url(../../assets/fonts/sf-ui-display-light.otf);
+}
+
+
+.btn {
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-family: sf-ui-display-light;
+}
+
+.btn-secondary {
+  padding: 8px 35px;
+  background: #85898C;
+}
+
+.btn-outline-secondary {
+  color: #000;
+  border: 1px solid #bbb3b3;
+}
+
+
+.btn-outline-secondary:hover {
+  background: #0093DF;
+  border: 1px solid #0093DF;
+ }
+
+
+.form-control {
+     border-radius: 8px;
+    height: 50px;
+      font-family: sf-ui-display-light;
+    background: #F5F5F6;
+    font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #0093DF;
+}
+
+.main-content {
+  background-image: linear-gradient(0deg, #00000075, #00000026), url(../../assets/images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.main-content h1 {
+  color: #fff;
+  font-size: 42px;
+}
+
+.main-content .text {
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: 400;
+    font-family: sf-ui-display-light;
+}
+
+.main-content .card {
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px #00000014;
+}
+
+.main-content .card-body {
+  padding: 25px;
+}
+
+.main-content .card-body h4 {
+  margin-bottom: 20px;
+      font-size: 18px;
+    line-height: 30px;
+}
+
+.media p {
+  font-size: 15px;
+    font-family: sf-ui-display-light;
+}
+
+
+  .main-content label {
+      font-family: sf-ui-display-light;
+  }
+
+/* Media Query */
+
+
+@media (max-width: 576px) {
+  .main-content {
+    background: none;
+    padding-top: 0;
+        padding-bottom: 20px;
+  }
+  .row.justify-content-center {
+    margin-top: -250px;
+  }
+  .main-content h1 {
+    font-size: 28px;
+  }
+  .mobile-img {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .main-content .btn-outline-secondary {
+    margin-top: 20px;
+  }
+
+  .main-content .card-body h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .main-content label {
+    font-size: 13px;
+  }
+}
