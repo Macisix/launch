@@ -22,7 +22,7 @@
             <div class="col-md-6 col-xl-5 d-flex align-items-end">
                 <div class="mb-4">
                      <!-- <img class="mb-3" src="assets/images/logo.png" alt="logo"> -->
-                     <h1>Moving house soon</h1>
+                     <h1>Moving house soon?</h1>
                      <p class="text">Haulmate lets you organise all your moving services from one place, saving you hours! Launching in June, we're excited to give you a faster way to move house</p>
                 </div>
             </div>
