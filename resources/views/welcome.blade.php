@@ -21,10 +21,9 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-xl-5 d-flex align-items-end">
                 <div class="mb-4">
-                    <img class="mb-3" src="{{ url('assets/images/logo.png') }}" alt="logo">
-                    <h1>Make your move</h1>
-                    <p class="text">We’re launching in Singapore soon. Enter your email address and get 10% off your
-                        move.</p>
+                     <!-- <img class="mb-3" src="assets/images/logo.png" alt="logo"> -->
+                     <h1>Moving house soon</h1>
+                     <p class="text">Haulmate lets you organise all your moving services from one place, saving you hours! Launching in June, we're excited to give you a faster way to move house</p>
                 </div>
             </div>
                <div class="col-md-6 col-xl-5 offset-xl-1">
@@ -42,7 +41,7 @@
                         @endif
                         <form action="{{url('store')}}" method="post">
                             @csrf
-                            <h4>A sneak peak into what you can expect</h4>
+                            <h4>Sign up today and get exclusive access</h4>
                             <div class="media align-items-center mb-3">
                                 <img src="{{ url('assets/images/icon-1.png') }}" class="mr-3" alt="...">
                                 <div class="media-body">
@@ -58,7 +57,7 @@
                             </div>
 
                             <hr/>
-                            <h4>Be the first to know once we launch in June and get 10% off your move</h4>
+                           <h4>Be the first to know once we launch in June</h4>
                             <div class="form-group">
                                 <label>Enter your email to get notified when we lanuch</label>
                                 <input type="email" name="email" class="form-control" placeholder="Enter your email here">
