@@ -1,0 +1,18 @@
+name: Deploy Remote website
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Create project dir
+      uses: appleboy/ssh-action@master
+      with:
+        HOST: ${{ secrets.SSH_HOST_NAME }}
+        USERNAME: ${{ secrets.SSH_USER_NAME }}
+        KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
+        script: |
+          cd /home/ec2-user
+          /usr/bin/bash test.sh
+          echo 'Deployment to server succesful!'
