@@ -11,7 +11,7 @@ jobs:
       with:
         HOST: ${{ secrets.SSH_HOST_NAME }}
         USERNAME: ${{ secrets.SSH_USER_NAME }}
-        KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /home/ec2-user
           /usr/bin/bash test.sh
