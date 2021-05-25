@@ -81,7 +81,7 @@
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
     }
-    $(document).on('keydown','input[type="email"]',function () {
+    $(document).on('keyup','input[type="email"]',function () {
         var checkEmail = isEmail($(this).val());
         if(checkEmail){
             $(this).parents('form').find('button').removeAttr('disabled').removeClass('btn-secondary').addClass('btn-primary');
