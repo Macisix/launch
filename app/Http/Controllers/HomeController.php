@@ -48,10 +48,10 @@ class HomeController extends Controller
             return back()->with('error', 'Please type a valid email address!');
         }
         else{
-            $mailc = new MailChimpController();
+            //$mailc = new MailChimpController();
 
             //Send email to User
-            $mailc->sendMailToClient('you-re-on-your-way-haulmate', $email);
+            //$mailc->sendMailToClient('you-re-on-your-way-haulmate', $email);
             return redirect()->back()->with('message', 'Thank you for subscription!');
         }
 
