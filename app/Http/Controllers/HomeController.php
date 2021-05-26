@@ -54,7 +54,7 @@ class HomeController extends Controller
             $template = 'moving-sucks-organise-your-move-in-90-seconds';
             //Send email to User
             $mailc->sendMailToClient($template, $subject, $email);
-            return redirect()->back()->with('message', 'Thank you for subscription!');
+            return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
         }
 
     }
