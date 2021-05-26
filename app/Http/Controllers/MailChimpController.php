@@ -8,12 +8,12 @@ use MailchimpTransactional;
 class MailChimpController extends Controller
 {
     //Customer Template Function
-    public function sendMailToClient($template_name, $email)
+    public function sendMailToClient($template_name, $subject, $email)
     {
         $message = [
             "from_name" => env('MAIL_FROM_NAME'),
             "from_email" => env('MAIL_FROM_ADDRESS'),
-            "subject" => "You’re on your way...  Haulmate",
+            "subject" => $subject,
             "to" => [
                 [
                     "email" => $email,

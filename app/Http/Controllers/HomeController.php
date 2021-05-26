@@ -50,8 +50,10 @@ class HomeController extends Controller
         else{
             $mailc = new MailChimpController();
 
+            $subject = 'Moving sucks! Organise your move in 90 seconds';
+            $template = 'moving-sucks-organise-your-move-in-90-seconds';
             //Send email to User
-            $mailc->sendMailToClient('you-re-on-your-way-haulmate', $email);
+            $mailc->sendMailToClient($template, $subject, $email);
             return redirect()->back()->with('message', 'Thank you for subscription!');
         }
 
