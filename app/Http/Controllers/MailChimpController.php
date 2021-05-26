@@ -44,6 +44,7 @@ class MailChimpController extends Controller
         } catch (Error $e) {
             $status = $e->getMessage();
         }
-        return $status;
+        return redirect()->back()->with('message', 'Thank you for subscription!');
+        //return $status;
     }
 }
