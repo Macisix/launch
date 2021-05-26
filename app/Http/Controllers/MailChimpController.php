@@ -40,11 +40,9 @@ class MailChimpController extends Controller
             $mailchimp = new MailchimpTransactional\ApiClient();
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
-            //$status = $response[0]->status;
         } catch (Error $e) {
             $status = $e->getMessage();
         }
         return redirect()->back()->with('message', 'Thank you for subscription!');
-        //return $status;
     }
 }
