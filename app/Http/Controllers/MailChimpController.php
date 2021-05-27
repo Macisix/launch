@@ -41,10 +41,12 @@ class MailChimpController extends Controller
             $mailchimp = new MailchimpTransactional\ApiClient();
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
+            echo '<pre>';print_r($mailchimp );echo '</pre>';
             /*if(isset($response) && empty($response) === false && empty($response[0]) === false){
                 $status = $response[0]->status;
             }*/
         } catch (Error $e) {
+            echo '<pre>';print_r($e->getMessage() );echo '</pre>';
             $status = $e->getMessage();
         }
     }
