@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::post('store','HomeController@store');
 #Route::resource('store','HomeController');
+
+Route::get('errorLogs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
