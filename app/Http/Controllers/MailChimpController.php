@@ -49,5 +49,6 @@ class MailChimpController extends Controller
             echo '<pre>';print_r($e->getMessage() );echo '</pre>';
             $status = $e->getMessage();
         }
+        die('Call');
     }
 }
