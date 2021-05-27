@@ -45,10 +45,12 @@ class MailChimpController extends Controller
             /*if(isset($response) && empty($response) === false && empty($response[0]) === false){
                 $status = $response[0]->status;
             }*/
+            die('Call1');
         } catch (Error $e) {
             echo '<pre>';print_r($e->getMessage() );echo '</pre>';
             $status = $e->getMessage();
+            die('Call2');
         }
-        die('Call');
+
     }
 }
