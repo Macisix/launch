@@ -19,13 +19,7 @@ class MailChimpController extends Controller
                     "email" => $email,
                     "type" => "to"
                 ]
-            ],
-            "global_merge_vars" => [
-                [
-                    "name" => "First_Name",
-                    "content" => $email
-                ],
-            ],
+            ]
         ];
 
         $template_content = array(
