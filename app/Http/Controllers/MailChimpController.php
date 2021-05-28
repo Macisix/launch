@@ -34,7 +34,8 @@ class MailChimpController extends Controller
             ],
             array(
                 'name' => 'main',
-                'content' => ''),
+                'content' => ''
+            ),
         );
         try {
             $status = '';
