@@ -43,7 +43,7 @@ class MailChimpController extends Controller
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             $resp = $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
             echo '1';
-            echo '<pre>';print_r($resp );echo '</pre>';
+            //echo '<pre>';print_r($resp );echo '</pre>';
         } catch (Error $e) {
             $resp2 = $e->getMessage();
             echo '2';
