@@ -23,7 +23,7 @@ class MailChimpController extends Controller
             "global_merge_vars" => [
                 [
                     "name" => "First_Name",
-                    "content" => ''
+                    "content" => 'Mike'
                 ],
             ],
         ];
@@ -31,12 +31,13 @@ class MailChimpController extends Controller
         $template_content = array(
             "tags" => [
                 'mail-to-customer',
-            ],
+            ]/*,
             array(
                 'name' => 'main',
                 'content' => ''
-            ),
+            ),*/
         );
+
         try {
             $status = '';
             $mailchimp = new MailchimpTransactional\ApiClient();
