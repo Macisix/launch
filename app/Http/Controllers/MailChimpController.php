@@ -32,18 +32,20 @@ class MailChimpController extends Controller
             ),
         );
 
-        $sendingData = [
+        /*$sendingData = [
+            "from_name" => env('MAIL_FROM_NAME'),
+            "from_email" => env('MAIL_FROM_ADDRESS'),
             "setApiKey" => env('MAILCHIMP_APIKEY'),
             "template_name" => $template_name,
             "template_content" => $template_content,
             "message" => $message,
         ];
+        echo '<pre>';print_r($sendingData );echo '</pre>';*/
         try {
             $status = '';
             //$mailchimp = new MailchimpTransactional\ApiClient();
             //$mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             //$resp = $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
-            echo env('MAILCHIMP_APIKEY');
             $mailchimp = new MailchimpTransactional\ApiClient();
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             $response = $mailchimp->messages->sendTemplate([
