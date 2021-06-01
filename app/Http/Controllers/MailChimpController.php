@@ -28,8 +28,7 @@ class MailChimpController extends Controller
         $template_content = array(
             array(
                 'name' => 'main',
-                'content' => ''
-            ),
+                'content' => 'Moving towards'),
         );
 
         try {
