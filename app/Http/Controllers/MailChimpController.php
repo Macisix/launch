@@ -28,7 +28,7 @@ class MailChimpController extends Controller
         $template_content = array(
             array(
                 'name' => 'main',
-                'content' => ''
+                'content' => 'Test'
             ),
         );
 
@@ -40,6 +40,5 @@ class MailChimpController extends Controller
         } catch (Error $e) {
             $resp = $e->getMessage();
         }
-        echo '<pre>';print_r($resp );echo '</pre>';die('Call');
     }
 }
