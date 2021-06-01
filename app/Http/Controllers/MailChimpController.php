@@ -45,10 +45,12 @@ class MailChimpController extends Controller
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-            //echo '<pre>';print_r($response );echo '</pre>';
+            echo '<pre>';print_r($response );echo '</pre>';
         } catch (Error $e) {
             $resp = $e->getMessage();
+            echo 'catch';
+            echo '<pre>';print_r($resp );echo '</pre>';
         }
-        //die('Call');
+        die('Call');
     }
 }
