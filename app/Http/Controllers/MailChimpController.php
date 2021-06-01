@@ -32,6 +32,12 @@ class MailChimpController extends Controller
             ),
         );
 
+        $sendingData = [
+            "setApiKey" => env('MAILCHIMP_APIKEY'),
+            "template_name" => $template_name,
+            "template_content" => $template_content,
+            "message" => $message,
+        ];
         try {
             $status = '';
             //$mailchimp = new MailchimpTransactional\ApiClient();
@@ -45,11 +51,7 @@ class MailChimpController extends Controller
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-            $sendingData = [
-                "template_name" => $template_name,
-                "template_content" => $template_content,
-                "message" => $message,
-            ];
+
         } catch (Error $e) {
             $resp = $e->getMessage();
         }

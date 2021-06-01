@@ -52,8 +52,10 @@ class HomeController extends Controller
 
             $subject = 'Moving sucks! Organise your move in 90 seconds';
             $template = 'move';
+            echo $from_name = env('MAIL_FROM_NAME');
+            echo $from_email = env('MAIL_FROM_ADDRESS');die('Call');
             //Send email to User
-            $mailc->sendMailToClient($template, $subject, $email);
+            $mailc->sendMailToClient($template, $subject, $email, $from_email, $from_name);
             return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
         }
 
