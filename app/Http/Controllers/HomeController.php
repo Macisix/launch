@@ -41,21 +41,22 @@ class HomeController extends Controller
         ];
 
         // validate the form data
-        $validator = Validator::make($request->all(), [
+       /* $validator = Validator::make($request->all(), [
             'email' => 'required'
         ], $messages);
         if ($validator->fails()) {
             return back()->with('error', 'Please type a valid email address!');
         }
         else{
-            $mailc = new MailChimpController();
 
-            $subject = 'Moving sucks! Organise your move in 90 seconds';
-            $template = 'move';
-            //Send email to User
-            $mailc->sendMailToClient($template, $subject, $email);
-            return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
-        }
+        }*/
+        $mailc = new MailChimpController();
+
+        $subject = 'Moving sucks! Organise your move in 90 seconds';
+        $template = 'move';
+        //Send email to User
+        $mailc->sendMailToClient($template, $subject, $email);
+        return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
 
     }
 
