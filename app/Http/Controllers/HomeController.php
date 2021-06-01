@@ -51,7 +51,7 @@ class HomeController extends Controller
             $mailc = new MailChimpController();
 
             $subject = 'Moving sucks! Organise your move in 90 seconds';
-            $template = 'moving-sucks-organise-your-move-in-90-seconds';
+            $template = 'move';
             //Send email to User
             $mailc->sendMailToClient($template, $subject, $email);
             return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
