@@ -24,13 +24,14 @@ class MailChimpController extends Controller
                 'template-test',
             ],
         ];
-
+echo '<pre>';print_r($message );echo '</pre>';
         $template_content = array(
             array(
                 'name' => 'main',
-                'content' => 'Moving towards'),
+                'content' => 'Key value'
+            ),
         );
-
+echo '<pre>';print_r($template_content );echo '</pre>';
         try {
             $status = '';
             //$mailchimp = new MailchimpTransactional\ApiClient();
@@ -39,20 +40,13 @@ class MailChimpController extends Controller
 
             $mailchimp = new MailchimpTransactional\ApiClient();
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
-            $response = $mailchimp->messages->send(["message" => 'This is test message!!!']);
-            echo '<pre>';print_r($response );echo '</pre>';
-            die('Call');
-            $response2 = $mailchimp->messages->sendTemplate([
+            $response = $mailchimp->messages->sendTemplate([
                 "template_name" => $template_name,
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-
-
         } catch (Error $e) {
             $resp = $e->getMessage();
-            echo 'catch';
-            echo '<pre>';print_r($resp );echo '</pre>';
         }
         die('Call');
     }
