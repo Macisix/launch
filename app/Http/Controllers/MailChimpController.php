@@ -10,9 +10,17 @@ class MailChimpController extends Controller
     //Customer Template Function
     public function sendMailToClient($template_name, $subject, $email)
     {
+        $from_name = env('MAIL_FROM_NAME');
+        if(empty($from_name) === true){
+            $from_name = 'Mike Male';
+        }
+        $from_email = env('MAIL_FROM_ADDRESS');
+        if(empty($from_email) === true){
+            $from_email = 'move@haulmate.co';
+        }
         $message = [
-            "from_name" => env('MAIL_FROM_NAME'),
-            "from_email" => env('MAIL_FROM_ADDRESS'),
+            "from_name" => $from_name,
+            "from_email" => $from_email,
             "subject" => $subject,
             "to" => [
                 [
