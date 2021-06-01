@@ -21,7 +21,7 @@ class MailChimpController extends Controller
                 ]
             ],
             "tags" => [
-                'mail-to-customer',
+                'template-test',
             ],
         ];
 
@@ -38,7 +38,8 @@ class MailChimpController extends Controller
             $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
             $resp = $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
         } catch (Error $e) {
-            $resp2 = $e->getMessage();
+            $resp = $e->getMessage();
         }
+        echo '<pre>';print_r($resp );echo '</pre>';die('Call');
     }
 }
