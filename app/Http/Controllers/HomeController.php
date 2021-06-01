@@ -53,8 +53,13 @@ class HomeController extends Controller
             $subject = 'Moving sucks! Organise your move in 90 seconds';
             $template = 'move';
             //Send email to User
-            $mailc->sendMailToClient($template, $subject, $email);
-            return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
+            $send = $mailc->sendMailToClient($template, $subject, $email);
+            if(isset($send) && empty($send) === false && $send == "error"){
+                return redirect()->back()->with('error', 'Thanks for signing up, Email notify is failed!');
+            }
+            else{
+                return redirect()->back()->with('message', 'Thanks for signing up, We will notify you on your email when we go live in June');
+            }
         }
 
     }
