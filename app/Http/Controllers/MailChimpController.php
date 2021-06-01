@@ -10,6 +10,10 @@ class MailChimpController extends Controller
     //Customer Template Function
     public function sendMailToClient($template_name, $subject, $email)
     {
+        $key = env('MAILCHIMP_APIKEY');
+        if(empty($key) === true){
+            $key = 'F1RQZ9pABNL4T9LhQsav9g';
+        }
         $from_name = env('MAIL_FROM_NAME');
         if(empty($from_name) === true){
             $from_name = 'Mike Male';
@@ -39,11 +43,12 @@ class MailChimpController extends Controller
                 'content' => ''
             ),
         );
-
+        echo '<pre>';print_r($message );echo '</pre>';
+        echo $key;
         try {
             $status = '';
             $mailchimp = new MailchimpTransactional\ApiClient();
-            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+            $mailchimp->setApiKey($key);
             $response = $mailchimp->messages->sendTemplate(["template_name" => $template_name, "template_content" => $template_content, "message" => $message]);
             echo '<pre>';print_r($response );echo '</pre>';die('Ca232ll');
         } catch (Error $e) {
