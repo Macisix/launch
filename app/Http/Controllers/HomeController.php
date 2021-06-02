@@ -51,7 +51,7 @@ class HomeController extends Controller
             $mailc = new MailChimpController();
 
             $subject = 'Moving sucks! Organise your move in 90 seconds';
-            $template = 'move';
+            $template = 'moving-sucks-organise-your-move-in-90-seconds';
             //Send email to User
             $send = $mailc->sendMailToClient($template, $subject, $email);
             if(isset($send) && empty($send) === false && $send == "error"){
